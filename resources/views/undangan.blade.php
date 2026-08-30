@@ -1932,8 +1932,7 @@
       .react-datepicker__portal .react-datepicker__current-month,
       .react-datepicker__portal .react-datepicker-time__header {
         font-size: 1.44rem;
-      defer=""
-    ></script>
+    </style>
   </head>
   <body
     class="wp-singular post-template post-template-elementor_canvas single single-post postid-6208 single-format-standard wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-canvas elementor-kit-3395 elementor-page elementor-page-6208 e--ua-blink e--ua-chrome e--ua-webkit"

@@ -12,6 +12,10 @@ Route::post('/guestbook', [GuestbookController::class, 'store'])
     ->middleware('throttle:10,1')
     ->name('guestbook.store');
 
+// Netralkan beacon telemetri Cloudflare (RUM) bawaan modul WeddingPress:
+// di lokal tidak ada Cloudflare, jadi beri respons kosong agar console bersih.
+Route::post('/cdn-cgi/rum', fn () => response()->noContent())->name('cf.rum');
+
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::inertia('dashboard', 'dashboard')->name('dashboard');
 });
