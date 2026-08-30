@@ -238,13 +238,13 @@
     <link
       rel="stylesheet"
       id="bdt-uikit-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/bdt-uikit.css"
+      href="/undangan/_files/bdt-uikit.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="ep-helper-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/ep-helper.css"
+      href="/undangan/_files/ep-helper.css"
       media="all"
     />
     <style id="wp-emoji-styles-inline-css">
@@ -689,13 +689,13 @@
     <link
       rel="stylesheet"
       id="exad-main-style-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/exad-styles.min.css"
+      href="/undangan/_files/exad-styles.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="cui_style-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/cui_style.css"
+      href="/undangan/_files/cui_style.css"
       media="screen"
     />
     <style id="cui_style-inline-css">
@@ -754,242 +754,242 @@
     <link
       rel="stylesheet"
       id="wdp-icon-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/new-icon.min.css"
+      href="/undangan/_files/new-icon.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="hello-elementor-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/reset.css"
+      href="/undangan/_files/reset.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="hello-elementor-theme-style-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/theme.css"
+      href="/undangan/_files/theme.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="hello-elementor-header-footer-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/header-footer.css"
+      href="/undangan/_files/header-footer.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="elementor-frontend-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/frontend.min.css"
+      href="/undangan/_files/frontend.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="elementor-post-3395-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/post-3395.css"
+      href="/undangan/_files/post-3395.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="weddingpress-wdp-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/wdp.css"
+      href="/undangan/_files/wdp.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="kirim-kit-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/guest-book.css"
+      href="/undangan/_files/guest-book.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="font-awesome-5-all-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/all.min.css"
+      href="/undangan/_files/all.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="font-awesome-4-shim-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/v4-shims.min.css"
+      href="/undangan/_files/v4-shims.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="lgefep-filter-select2-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/select2.min.css"
+      href="/undangan/_files/select2.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="widget-loop-filter-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/widget-loop-filter.min.css"
+      href="/undangan/_files/widget-loop-filter.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="lgefep-filter-bar-style-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/index.min.css"
+      href="/undangan/_files/index.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="widget-spacer-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/widget-spacer.min.css"
+      href="/undangan/_files/widget-spacer.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="e-animation-zoomIn-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/zoomIn.min.css"
+      href="/undangan/_files/zoomIn.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="widget-heading-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/widget-heading.min.css"
+      href="/undangan/_files/widget-heading.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="e-animation-fadeInUp-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/fadeInUp.min.css"
+      href="/undangan/_files/fadeInUp.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="e-sticky-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/sticky.min.css"
+      href="/undangan/_files/sticky.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="e-animation-fadeInLeft-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/fadeInLeft.min.css"
+      href="/undangan/_files/fadeInLeft.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="widget-image-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/widget-image.min.css"
+      href="/undangan/_files/widget-image.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="e-animation-fadeInDown-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/fadeInDown.min.css"
+      href="/undangan/_files/fadeInDown.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="e-animation-fadeInRight-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/fadeInRight.min.css"
+      href="/undangan/_files/fadeInRight.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="widget-countdown-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/widget-countdown.min.css"
+      href="/undangan/_files/widget-countdown.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="wdp-copy-widget-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/wdp-copy-widget.css"
+      href="/undangan/_files/wdp-copy-widget.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="widget-divider-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/widget-divider.min.css"
+      href="/undangan/_files/widget-divider.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="e-animation-pulse-shrink-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/e-animation-pulse-shrink.min.css"
+      href="/undangan/_files/e-animation-pulse-shrink.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="widget-icon-box-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/widget-icon-box.min.css"
+      href="/undangan/_files/widget-icon-box.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="e-shapes-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/shapes.min.css"
+      href="/undangan/_files/shapes.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="e-animation-grow-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/e-animation-grow.min.css"
+      href="/undangan/_files/e-animation-grow.min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="elementor-post-6208-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/post-6208.css"
+      href="/undangan/_files/post-6208.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="elementor-gf-local-roboto-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/roboto.css"
+      href="/undangan/_files/roboto.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="elementor-gf-local-robotoslab-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/robotoslab.css"
+      href="/undangan/_files/robotoslab.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="elementor-gf-local-pinyonscript-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/pinyonscript.css"
+      href="/undangan/_files/pinyonscript.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="elementor-gf-local-montserrat-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/montserrat.css"
+      href="/undangan/_files/montserrat.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="elementor-gf-local-playfairdisplay-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/playfairdisplay.css"
+      href="/undangan/_files/playfairdisplay.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="elementor-gf-local-playfairdisplaysc-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/playfairdisplaysc.css"
+      href="/undangan/_files/playfairdisplaysc.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="elementor-gf-local-poppins-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/poppins.css"
+      href="/undangan/_files/poppins.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="elementor-gf-local-cormorantinfant-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/cormorantinfant.css"
+      href="/undangan/_files/cormorantinfant.css"
       media="all"
     />
     <script
       id="jquery-core-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/jquery.min.js.download"
+      src="/undangan/_files/jquery.min.js.download"
     ></script>
     <script
       id="jquery-migrate-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/jquery-migrate.min.js.download"
+      src="/undangan/_files/jquery-migrate.min.js.download"
     ></script>
     <script
       id="font-awesome-4-shim-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/v4-shims.min.js.download"
+      src="/undangan/_files/v4-shims.min.js.download"
     ></script>
     <link rel="https://api.w.org/" href="https://undangandigit.id/wp-json/" />
     <link
@@ -1949,7 +1949,7 @@
       }
     </style>
     <script
-      src="./Osa Gelar - Undangan Digital/undangan/_files/wp-emoji-release.min.js.download"
+      src="/undangan/_files/wp-emoji-release.min.js.download"
       defer=""
     ></script>
   </head>
@@ -2298,7 +2298,7 @@
                           decoding="async"
                           width="566"
                           height="577"
-                          src="./Osa Gelar - Undangan Digital/undangan/_files/Putih-Biru-Minimalis-Undangan-Pernikahanmmmmmmmmmm-e1696480239700.webp"
+                          src="/undangan/_files/Putih-Biru-Minimalis-Undangan-Pernikahanmmmmmmmmmm-e1696480239700.webp"
                           class="attachment-full size-full wp-image-17545"
                           alt=""
                           srcset="
@@ -2526,7 +2526,7 @@
                                   decoding="async"
                                   width="558"
                                   height="577"
-                                  src="./Osa Gelar - Undangan Digital/undangan/_files/Putih-Biru-Minimalis-Undangan-Pernikahanmmmmmmmmmm-1-e1696480278821.webp"
+                                  src="/undangan/_files/Putih-Biru-Minimalis-Undangan-Pernikahanmmmmmmmmmm-1-e1696480278821.webp"
                                   class="attachment-full size-full wp-image-17546"
                                   alt=""
                                   srcset="
@@ -3008,7 +3008,7 @@
                                   decoding="async"
                                   width="358"
                                   height="414"
-                                  src="./Osa Gelar - Undangan Digital/undangan/_files/Pastel-Putih-Bunga-Wedding-Planner-Undanganfffffff-e1696481491753.webp"
+                                  src="/undangan/_files/Pastel-Putih-Bunga-Wedding-Planner-Undanganfffffff-e1696481491753.webp"
                                   class="attachment-full size-full wp-image-17547"
                                   alt=""
                                   srcset="
@@ -3163,7 +3163,7 @@
                                   decoding="async"
                                   width="358"
                                   height="414"
-                                  src="./Osa Gelar - Undangan Digital/undangan/_files/Pastel-Putih-Bunga-Wedding-Planner-Undanganfffffff-e1696481491753.webp"
+                                  src="/undangan/_files/Pastel-Putih-Bunga-Wedding-Planner-Undanganfffffff-e1696481491753.webp"
                                   class="attachment-full size-full wp-image-17547"
                                   alt=""
                                   srcset="
@@ -3480,7 +3480,7 @@
                                   decoding="async"
                                   width="358"
                                   height="414"
-                                  src="./Osa Gelar - Undangan Digital/undangan/_files/Pastel-Putih-Bunga-Wedding-Planner-Undanganfffffff-e1696481491753.webp"
+                                  src="/undangan/_files/Pastel-Putih-Bunga-Wedding-Planner-Undanganfffffff-e1696481491753.webp"
                                   class="attachment-full size-full wp-image-17547"
                                   alt=""
                                   srcset="
@@ -3959,7 +3959,7 @@
                                           decoding="async"
                                           width="1773"
                                           height="1182"
-                                          src="./Osa Gelar - Undangan Digital/undangan/_files/BANK-BCA.webp"
+                                          src="/undangan/_files/BANK-BCA.webp"
                                           class="attachment-full size-full wp-image-4853"
                                           alt=""
                                           srcset="
@@ -3984,7 +3984,7 @@
                                           decoding="async"
                                           width="150"
                                           height="150"
-                                          src="./Osa Gelar - Undangan Digital/undangan/_files/chip-atm-undangan.webp"
+                                          src="/undangan/_files/chip-atm-undangan.webp"
                                           class="attachment-full size-full wp-image-7100"
                                           alt=""
                                         />
@@ -4080,7 +4080,7 @@
                                           decoding="async"
                                           width="1773"
                                           height="1182"
-                                          src="./Osa Gelar - Undangan Digital/undangan/_files/BANK-BCA.webp"
+                                          src="/undangan/_files/BANK-BCA.webp"
                                           class="attachment-full size-full wp-image-4854"
                                           alt=""
                                           srcset="
@@ -4105,7 +4105,7 @@
                                           decoding="async"
                                           width="150"
                                           height="150"
-                                          src="./Osa Gelar - Undangan Digital/undangan/_files/chip-atm-undangan.webp"
+                                          src="/undangan/_files/chip-atm-undangan.webp"
                                           class="attachment-full size-full wp-image-7100"
                                           alt=""
                                         />
@@ -5046,52 +5046,52 @@
     <link
       rel="stylesheet"
       id="udt-style-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/style.css"
+      href="/undangan/_files/style.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="udt-popup-form-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/popup-form.css"
+      href="/undangan/_files/popup-form.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="udt-multi-step-form-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/multi-step-form.css"
+      href="/undangan/_files/multi-step-form.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="udt-fontawesome-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/all(1).min.css"
+      href="/undangan/_files/all(1).min.css"
       media="all"
     />
     <link
       rel="stylesheet"
       id="flatpickr-css-css"
-      href="./Osa Gelar - Undangan Digital/undangan/_files/flatpickr.min.css"
+      href="/undangan/_files/flatpickr.min.css"
       media="all"
     />
     <script
       id="wdp-swiper-js-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/wdp-swiper.min.js.download"
+      src="/undangan/_files/wdp-swiper.min.js.download"
     ></script>
     <script
       id="weddingpress-qr-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/qr-code.js.download"
+      src="/undangan/_files/qr-code.js.download"
     ></script>
     <script
       id="exad-main-script-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/exad-scripts.min.js.download"
+      src="/undangan/_files/exad-scripts.min.js.download"
     ></script>
     <script
       id="qr-code-styling-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/qr-code-styling.js.download"
+      src="/undangan/_files/qr-code-styling.js.download"
     ></script>
     <script
       id="kirimkit-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/xlsx.full.min.js.download"
+      src="/undangan/_files/xlsx.full.min.js.download"
     ></script>
     <script id="cui_js_script-js-extra">
       var CUI_WP = {
@@ -5123,31 +5123,31 @@
     </script>
     <script
       id="cui_js_script-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/cui_script.js.download"
+      src="/undangan/_files/cui_script.js.download"
     ></script>
     <script
       id="cui_jPages-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/jquery.jPages.min.js.download"
+      src="/undangan/_files/jquery.jPages.min.js.download"
     ></script>
     <script
       id="cui_textCounter-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/jquery.textareaCounter.js.download"
+      src="/undangan/_files/jquery.textareaCounter.js.download"
     ></script>
     <script
       id="cui_placeholder-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/jquery.placeholder.min.js.download"
+      src="/undangan/_files/jquery.placeholder.min.js.download"
     ></script>
     <script
       id="cui_autosize-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/autosize.min.js.download"
+      src="/undangan/_files/autosize.min.js.download"
     ></script>
     <script
       id="wp-hooks-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/hooks.min.js.download"
+      src="/undangan/_files/hooks.min.js.download"
     ></script>
     <script
       id="wp-i18n-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/i18n.min.js.download"
+      src="/undangan/_files/i18n.min.js.download"
     ></script>
     <script id="wp-i18n-js-after">
       wp.i18n.setLocaleData({ "text direction\u0004ltr": ["ltr"] });
@@ -5155,19 +5155,19 @@
     </script>
     <script
       id="react-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/react.min.js.download"
+      src="/undangan/_files/react.min.js.download"
     ></script>
     <script
       id="react-dom-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/react-dom.min.js.download"
+      src="/undangan/_files/react-dom.min.js.download"
     ></script>
     <script
       id="wp-escape-html-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/escape-html.min.js.download"
+      src="/undangan/_files/escape-html.min.js.download"
     ></script>
     <script
       id="wp-element-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/element.min.js.download"
+      src="/undangan/_files/element.min.js.download"
     ></script>
     <script id="wdp-script-js-extra">
       var _wdpobject = {
@@ -5185,23 +5185,23 @@
     </script>
     <script
       id="wdp-script-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/license.min.js.download"
+      src="/undangan/_files/license.min.js.download"
     ></script>
     <script
       id="hello-theme-frontend-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/hello-frontend.js.download"
+      src="/undangan/_files/hello-frontend.js.download"
     ></script>
     <script
       id="elementor-webpack-runtime-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/webpack.runtime.min.js.download"
+      src="/undangan/_files/webpack.runtime.min.js.download"
     ></script>
     <script
       id="elementor-frontend-modules-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/frontend-modules.min.js.download"
+      src="/undangan/_files/frontend-modules.min.js.download"
     ></script>
     <script
       id="jquery-ui-core-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/core.min.js.download"
+      src="/undangan/_files/core.min.js.download"
     ></script>
     <script id="elementor-frontend-js-before">
       var elementorFrontendConfig = {
@@ -5338,20 +5338,20 @@
     </script>
     <script
       id="elementor-frontend-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/frontend.min.js.download"
+      src="/undangan/_files/frontend.min.js.download"
     ></script>
     <span id="elementor-device-mode" class="elementor-screen-only"></span>
     <script
       id="e-sticky-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/jquery.sticky.min.js.download"
+      src="/undangan/_files/jquery.sticky.min.js.download"
     ></script>
     <script
       id="wdp-copy-widget-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/wdp-copy-widget.js.download"
+      src="/undangan/_files/wdp-copy-widget.js.download"
     ></script>
     <script
       id="elementor-pro-webpack-runtime-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/webpack-pro.runtime.min.js.download"
+      src="/undangan/_files/webpack-pro.runtime.min.js.download"
     ></script>
     <script id="elementor-pro-frontend-js-before">
       var ElementorProFrontendConfig = {
@@ -5396,32 +5396,32 @@
     </script>
     <script
       id="elementor-pro-frontend-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/frontend.min(1).js.download"
+      src="/undangan/_files/frontend.min(1).js.download"
     ></script>
     <script
       id="pro-elements-handlers-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/elements-handlers.min.js.download"
+      src="/undangan/_files/elements-handlers.min.js.download"
     ></script>
     <svg style="display: none" class="e-font-icon-svg-symbols"></svg>
     <script
       id="bdt-uikit-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/bdt-uikit.js.download"
+      src="/undangan/_files/bdt-uikit.js.download"
     ></script>
     <script
       id="udt-script-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/script.js.download"
+      src="/undangan/_files/script.js.download"
     ></script>
     <script
       id="udt-popup-form-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/popup-form.js.download"
+      src="/undangan/_files/popup-form.js.download"
     ></script>
     <script
       id="udt-multi-step-form-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/multi-step-form.js.download"
+      src="/undangan/_files/multi-step-form.js.download"
     ></script>
     <script
       id="flatpickr-js-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/flatpickr.min.js.download"
+      src="/undangan/_files/flatpickr.min.js.download"
     ></script>
     <script id="flatpickr-js-js-after">
       document.addEventListener("DOMContentLoaded", function () {
@@ -5452,7 +5452,7 @@
     </script>
     <script
       id="weddingpress-wdp-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/wdp.min.js.download"
+      src="/undangan/_files/wdp.min.js.download"
     ></script>
     <script id="weddingpress-wdp-js-after">
       /*!
@@ -5619,15 +5619,15 @@ Pastikan untuk teks 'Tamu Undangan' css classesnya sudah terisi: 'namatamu'
     </script>
     <script
       id="kirim-kit-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/guest-form.js.download"
+      src="/undangan/_files/guest-form.js.download"
     ></script>
     <script
       id="lgefep-filter-select2-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/select2.min.js.download"
+      src="/undangan/_files/select2.min.js.download"
     ></script>
     <script
       id="lgefep-filter-bar-script-js"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/index.min.js.download"
+      src="/undangan/_files/index.min.js.download"
     ></script>
     <script id="wp-emoji-settings" type="application/json">
       {
@@ -5937,7 +5937,7 @@ Pastikan untuk teks 'Tamu Undangan' css classesnya sudah terisi: 'namatamu'
     </script>
     <script
       type="module"
-      src="./Osa Gelar - Undangan Digital/undangan/_files/v3d52b47920f24c319d37e2661827c42b1787588026925"
+      src="/undangan/_files/v3d52b47920f24c319d37e2661827c42b1787588026925"
       integrity="sha512-d9sL6GJLXn6fInD1+TVXhTcQOsmxeHfmHAvwGDIxp5TO+uo1fiWW7mHomMj4MLRlCsJDTqXzWLHJFFlPCEIj/A=="
       data-cf-beacon='{"version":"2024.11.0","token":"cfad02654b254a209aa1108697adc4b7","r":1}'
       crossorigin="anonymous"
