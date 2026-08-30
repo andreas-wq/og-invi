@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\GuestbookAdminController;
 use App\Http\Controllers\GuestbookController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +19,13 @@ Route::post('/cdn-cgi/rum', fn () => response()->noContent())->name('cf.rum');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::inertia('dashboard', 'dashboard')->name('dashboard');
+
+    Route::prefix('admin')->name('admin.')->middleware('can:manage-guestbook')->group(function () {
+        Route::get('guestbook', [GuestbookAdminController::class, 'index'])
+            ->name('guestbook.index');
+        Route::delete('guestbook/{guestbook_message}', [GuestbookAdminController::class, 'destroy'])
+            ->name('guestbook.destroy');
+    });
 });
 
 require __DIR__.'/settings.php';
