@@ -23,6 +23,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::prefix('admin')->name('admin.')->middleware('can:manage-guestbook')->group(function () {
         Route::get('guestbook', [GuestbookAdminController::class, 'index'])
             ->name('guestbook.index');
+        Route::post('guestbook/{guestbook_message}/reply', [GuestbookAdminController::class, 'reply'])
+            ->name('guestbook.reply');
         Route::delete('guestbook/{guestbook_message}', [GuestbookAdminController::class, 'destroy'])
             ->name('guestbook.destroy');
     });

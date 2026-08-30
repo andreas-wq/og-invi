@@ -72,6 +72,8 @@ class GuestbookController extends Controller
             'name' => $guestbookMessage->name,
             'message' => $guestbookMessage->message,
             'attendance' => $guestbookMessage->attendance,
+            'reply' => $guestbookMessage->reply,
+            'replied_at' => $guestbookMessage->replied_at?->locale('id')->diffForHumans(),
             'time' => $guestbookMessage->created_at?->locale('id')->diffForHumans(),
         ];
     }

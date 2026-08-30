@@ -25,6 +25,8 @@ class GuestbookAdminController extends Controller
                 'name' => $message->name,
                 'message' => $message->message,
                 'attendance' => $message->attendance,
+                'reply' => $message->reply,
+                'replied_at' => $message->replied_at?->locale('id')->diffForHumans(),
                 'time' => $message->created_at?->locale('id')->diffForHumans(),
                 'created_at' => $message->created_at?->locale('id')->isoFormat('D MMMM Y HH:mm'),
             ]);
@@ -49,6 +51,28 @@ class GuestbookAdminController extends Controller
         Inertia::flash('toast', [
             'type' => 'success',
             'message' => "Ucapan dari \"{$guestbookMessage->name}\" telah dihapus.",
+        ]);
+
+        return back();
+    }
+
+    /**
+     * Reply to a guestbook message.
+     */
+    public function reply(Request $request, GuestbookMessage $guestbookMessage): RedirectResponse
+    {
+        $validated = $request->validate([
+            'reply' => ['required', 'string', 'min:1', 'max:2000'],
+        ]);
+
+        $guestbookMessage->update([
+            'reply' => $validated['reply'],
+            'replied_at' => now(),
+        ]);
+
+        Inertia::flash('toast', [
+            'type' => 'success',
+            'message' => "Balasan untuk \"{$guestbookMessage->name}\" telah disimpan.",
         ]);
 
         return back();
