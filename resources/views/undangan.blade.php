@@ -3,6 +3,7 @@
 <html lang="en-US" translate="no">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     <style type="text/css">
       .cui-comment-text img {
@@ -4237,9 +4238,9 @@
                                 <a
                                   id="cui-link-6208"
                                   class="cui-link cui-icon-link cui-icon-link-true auto-load-true"
-                                  href="/?post_id=6208&amp;comments=0&amp;get=100&amp;order=DESC"
+                                  href="#doa-ucapan"
                                   title="0 Comments"
-                                  ><span>0</span> Comments</a
+                                  ><span id="gb-count-total">{{ $counts['total'] }}</span> Comments</a
                                 >
                               </div>
                             </div>
@@ -4259,12 +4260,12 @@
                                       <div
                                         class="cui_comment_count_card cui_card-hadir"
                                       >
-                                        <span>0</span><span>Hadir</span>
+                                        <span id="gb-count-hadir">{{ $counts['hadir'] }}</span><span>Hadir</span>
                                       </div>
                                       <div
                                         class="cui_comment_count_card cui_card-tidak_hadir"
                                       >
-                                        <span>0</span><span>Tidak Hadir</span>
+                                        <span id="gb-count-tidak-hadir">{{ $counts['tidak_hadir'] }}</span><span>Tidak Hadir</span>
                                       </div>
                                     </div>
                                   </div>
@@ -4296,7 +4297,6 @@
                                             value=""
                                             required=""
                                             nofocus=""
-                                            readonly="readonly"
                                           /><span class="cui-required">*</span
                                           ><span
                                             class="cui-error-info-name"
@@ -4337,7 +4337,27 @@
                                           >
                                         </div>
                                         <div class="nm-wrap-comments">
-                                          <div class="row"></div>
+                                          <ul class="cui-container-comments" id="cui-comments-list">
+                                            @forelse($messages as $msg)
+                                            <li class="cui-item-comment">
+                                              <div class="cui-comment-avatar"><img src="/undangan/uploads/guest-avatar.svg" alt="{{ $msg->name }}" /></div>
+                                              <div class="cui-comment-content">
+                                                <div class="cui-comment-info">
+                                                  <span class="cui-commenter-name">{{ $msg->name }}</span>
+                                                  @if($msg->attendance)
+                                                  <span class="cui-comment-attendence">{{ $msg->attendance }}</span>
+                                                  @endif
+                                                </div>
+                                                <p class="cui-comment-text">{{ $msg->message }}</p>
+                                                <span class="cui-comment-time">{{ $msg->created_at->locale('id')->diffForHumans() }}</span>
+                                              </div>
+                                            </li>
+                                            @empty
+                                            <li class="cui-item-comment cui-no-comment">
+                                              <p class="cui-comment-text">Jadilah yang pertama mengirim doa &amp; ucapan.</p>
+                                            </li>
+                                            @endforelse
+                                          </ul>
                                         </div>
                                         <div
                                           class="cui-clearfix cui-wrap-select cui-field-wrap cui-select-attending"
@@ -5990,5 +6010,160 @@ Pastikan untuk teks 'Tamu Undangan' css classesnya sudah terisi: 'namatamu'
         }
       })();
     </script>
-  </body>
+  <script>
+    (function () {
+      "use strict";
+      if (!window.jQuery) return;
+      var $ = window.jQuery;
+
+      // 1) Lepas handler submit bawaan plugin (menunjuk ke admin-ajax server lama)
+      $(document).off("submit", ".cui-container-form form");
+
+      // 2) Cegah auto-load komentar lama saat counter diklik
+      document.addEventListener(
+        "click",
+        function (e) {
+          if (e.target.closest("#cui-link-6208")) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+          }
+        },
+        true
+      );
+
+      var form = document.getElementById("commentform-6208");
+      if (!form) return;
+
+      var tokenMeta = document.querySelector('meta[name="csrf-token"]');
+      var token = tokenMeta ? tokenMeta.getAttribute("content") : "";
+      var list = document.getElementById("cui-comments-list");
+      var statusEl = document.getElementById("cui-comment-status-6208");
+      var emptyItem = list ? list.querySelector(".cui-no-comment") : null;
+      var statusTimer = null;
+
+      function showStatus(text) {
+        if (!statusEl) return;
+        statusEl.textContent = text;
+        statusEl.style.display = "block";
+        clearTimeout(statusTimer);
+        statusTimer = setTimeout(function () {
+          statusEl.style.display = "none";
+        }, 5000);
+      }
+
+      function buildItem(d) {
+        var li = document.createElement("li");
+        li.className = "cui-item-comment";
+
+        var av = document.createElement("div");
+        av.className = "cui-comment-avatar";
+        var img = document.createElement("img");
+        img.src = "/undangan/uploads/guest-avatar.svg";
+        img.alt = d.name;
+        av.appendChild(img);
+
+        var content = document.createElement("div");
+        content.className = "cui-comment-content";
+
+        var info = document.createElement("div");
+        info.className = "cui-comment-info";
+        var nm = document.createElement("span");
+        nm.className = "cui-commenter-name";
+        nm.textContent = d.name;
+        info.appendChild(nm);
+        if (d.attendance) {
+          var at = document.createElement("span");
+          at.className = "cui-comment-attendence";
+          at.textContent = d.attendance;
+          info.appendChild(at);
+        }
+
+        var p = document.createElement("p");
+        p.className = "cui-comment-text";
+        p.textContent = d.message;
+
+        var t = document.createElement("span");
+        t.className = "cui-comment-time";
+        t.textContent = "baru saja";
+
+        content.appendChild(info);
+        content.appendChild(p);
+        content.appendChild(t);
+        li.appendChild(av);
+        li.appendChild(content);
+        return li;
+      }
+
+      function updateCounts(c) {
+        var map = {
+          "gb-count-total": c.total,
+          "gb-count-hadir": c.hadir,
+          "gb-count-tidak-hadir": c.tidak_hadir,
+        };
+        Object.keys(map).forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) el.textContent = map[id];
+        });
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        var nameInput = form.querySelector("#author");
+        var msgInput = form.querySelector("#cui-textarea-6208");
+        var confSelect = form.querySelector("#konfirmasi");
+        var btn = form.querySelector('[type="submit"]');
+
+        var name = nameInput ? nameInput.value.trim() : "";
+        var message = msgInput ? msgInput.value.trim() : "";
+        var attendance = confSelect ? confSelect.value : "";
+
+        if (name.length < 1) return showStatus("Mohon isi nama Anda terlebih dahulu.");
+        if (message.length < 2) return showStatus("Ucapan minimal 2 karakter.");
+
+        if (btn) btn.disabled = true;
+
+        fetch("/guestbook", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+            "X-CSRF-TOKEN": token,
+          },
+          body: JSON.stringify({
+            name: name,
+            message: message,
+            attendance: attendance === "" ? null : attendance,
+          }),
+        })
+          .then(function (r) {
+            return r.json().then(function (d) {
+              return { ok: r.ok, data: d };
+            });
+          })
+          .then(function (res) {
+            if (btn) btn.disabled = false;
+            if (!res.ok) {
+              var errs = res.data && res.data.errors;
+              var first = errs ? errs[Object.keys(errs)[0]][0] : null;
+              return showStatus(first || "Gagal mengirim. Silakan coba lagi.");
+            }
+            if (emptyItem) {
+              emptyItem.remove();
+              emptyItem = null;
+            }
+            if (list) list.prepend(buildItem(res.data.data));
+            updateCounts(res.data.counts);
+            if (msgInput) msgInput.value = "";
+            if (confSelect) confSelect.value = "";
+            showStatus(res.data.message || "Terima kasih!");
+          })
+          .catch(function () {
+            if (btn) btn.disabled = false;
+            showStatus("Terjadi kesalahan jaringan. Silakan coba lagi.");
+          });
+      });
+    })();
+    </script>
+    </body>
 </html>
