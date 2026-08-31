@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\Admin\GuestbookAdminController;
+use App\Http\Controllers\Admin\InviteController;
 use App\Http\Controllers\GuestbookController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [GuestbookController::class, 'page'])->name('home');
+Route::get('/v2', [GuestbookController::class, 'page2'])->name('home2');
 
 Route::get('/guestbook/messages', [GuestbookController::class, 'index'])
     ->name('guestbook.index');
@@ -27,6 +29,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
             ->name('guestbook.reply');
         Route::delete('guestbook/{guestbook_message}', [GuestbookAdminController::class, 'destroy'])
             ->name('guestbook.destroy');
+             
+Route::get('/invite', [InviteController::class, 'index'])->name('invite');
     });
 });
 

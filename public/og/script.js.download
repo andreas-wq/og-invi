@@ -1,0 +1,20 @@
+/**
+ * Undangandigit - Script Utama
+ * 
+ * File ini untuk script umum (global) di luar popup & form.
+ * Popup sudah dipisahkan di: popup-form.js
+ */
+
+document.addEventListener('DOMContentLoaded', function () {
+    console.log("✅ Undangandigit script.js loaded");
+
+    // --- Tempatkan script tambahan di sini ---
+    // Contoh: animasi hover grid, sticky bar, dll.
+
+    // Example dummy function (hapus kalau tidak dipakai)
+    function udt_dummy_example() {
+        console.log("Undangandigit is ready for more features 🚀");
+    }
+
+    udt_dummy_example();
+});

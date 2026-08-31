@@ -4338,6 +4338,7 @@
                                             </li>
                                             @endforelse
                                           </ul>
+                                          <div id="cui-comments-pagination" class="cui-pagination" data-current-page="{{ $messages->currentPage() ?? 1 }}" data-last-page="{{ $messages->lastPage() ?? 1 }}"></div>
                                         </div>
                                         <div
                                           class="cui-clearfix cui-wrap-select cui-field-wrap cui-select-attending"
@@ -5865,6 +5866,9 @@ Pastikan untuk teks 'Tamu Undangan' css classesnya sudah terisi: 'namatamu'
       var list = document.getElementById("cui-comments-list");
       var statusEl = document.getElementById("cui-comment-status-6208");
       var emptyItem = list ? list.querySelector(".cui-no-comment") : null;
+      var pagerEl = document.getElementById('cui-comments-pagination');
+      var currentPage = pagerEl && pagerEl.dataset && pagerEl.dataset.currentPage ? parseInt(pagerEl.dataset.currentPage, 10) : 1;
+      var lastPage = pagerEl && pagerEl.dataset && pagerEl.dataset.lastPage ? parseInt(pagerEl.dataset.lastPage, 10) : 1;
       var statusTimer = null;
 
       function showStatus(text) {
@@ -5876,6 +5880,55 @@ Pastikan untuk teks 'Tamu Undangan' css classesnya sudah terisi: 'namatamu'
           statusEl.style.display = "none";
         }, 5000);
       }
+
+      function renderList(items) {
+        if (!list) return;
+        list.innerHTML = '';
+        if (!items || items.length === 0) {
+          list.innerHTML = '<li class="cui-item-comment cui-no-comment"><p class="cui-comment-text">Jadilah yang pertama mengirim doa &amp; ucapan.</p></li>';
+          return;
+        }
+        items.forEach(function (d) {
+          list.appendChild(buildItem(d));
+        });
+      }
+
+      function renderPagination(meta) {
+        if (!pagerEl) return;
+        var cur = meta.current_page || 1;
+        var last = meta.last_page || 1;
+        currentPage = cur; lastPage = last;
+        if (last <= 1) { pagerEl.innerHTML = ''; return; }
+        var prevDisabled = cur <= 1 ? 'disabled' : '';
+        var nextDisabled = cur >= last ? 'disabled' : '';
+        pagerEl.innerHTML = '';
+        var prev = document.createElement('button');
+        prev.textContent = 'Prev'; prev.disabled = cur <= 1;
+        prev.addEventListener('click', function () { if (cur > 1) loadPage(cur - 1); });
+        var info = document.createElement('span');
+        info.textContent = ' Halaman ' + cur + ' dari ' + last + ' ';
+        var next = document.createElement('button');
+        next.textContent = 'Next'; next.disabled = cur >= last;
+        next.addEventListener('click', function () { if (cur < last) loadPage(cur + 1); });
+        pagerEl.appendChild(prev); pagerEl.appendChild(info); pagerEl.appendChild(next);
+      }
+
+      function loadPage(page) {
+        page = parseInt(page, 10) || 1;
+        fetch('/guestbook/messages?page=' + page, { headers: { Accept: 'application/json' } })
+          .then(function (r) { return r.json(); })
+          .then(function (res) {
+            if (!res || res.status !== 'success') return;
+            renderList(res.data || []);
+            renderPagination(res.meta || { current_page: 1, last_page: 1 });
+            updateCounts(res.counts || { total: 0, hadir: 0, tidak_hadir: 0 });
+            // Scroll into view of comments list
+            if (list) list.scrollIntoView({ behavior: 'smooth' });
+          })
+          .catch(function () { /* ignore */ });
+      }
+      // Initialize pagination UI on load
+      renderPagination({ current_page: currentPage, last_page: lastPage });
 
       function buildItem(d) {
         var li = document.createElement("li");
@@ -5910,7 +5963,7 @@ Pastikan untuk teks 'Tamu Undangan' css classesnya sudah terisi: 'namatamu'
 
         var t = document.createElement("span");
         t.className = "cui-comment-time";
-        t.textContent = "baru saja";
+        t.textContent = d.time || "baru saja";
 
         content.appendChild(info);
         content.appendChild(p);
@@ -5978,7 +6031,14 @@ Pastikan untuk teks 'Tamu Undangan' css classesnya sudah terisi: 'namatamu'
               emptyItem.remove();
               emptyItem = null;
             }
-            if (list) list.prepend(buildItem(res.data.data));
+            if (list) {
+              if (currentPage === 1) {
+                list.prepend(buildItem(res.data.data));
+              } else {
+                // new comment created — load page 1 to show latest
+                loadPage(1);
+              }
+            }
             updateCounts(res.data.counts);
             if (msgInput) msgInput.value = "";
             if (confSelect) confSelect.value = "";

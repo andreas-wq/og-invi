@@ -12,10 +12,11 @@ class GuestbookController extends Controller
 {
     public function page(): View
     {
+        $perPage = 10;
         $messages = GuestbookMessage::query()
             ->latest()
-            ->limit(100)
-            ->get();
+            ->paginate($perPage)
+            ->withQueryString();
 
         return view('undangan', [
             'messages' => $messages,
@@ -23,18 +24,39 @@ class GuestbookController extends Controller
         ]);
     }
 
-    public function index(): JsonResponse
+    public function page2(): View
     {
+        $perPage = 10;
         $messages = GuestbookMessage::query()
             ->latest()
-            ->limit(100)
-            ->get()
-            ->map(fn (GuestbookMessage $message) => $this->present($message));
+            ->paginate($perPage)
+            ->withQueryString();
+
+        return view('undangan-v2', [
+            'messages' => $messages,
+            'counts' => $this->counts(),
+        ]);
+    }
+
+    public function index(): JsonResponse
+    {
+        $perPage = 10;
+        $messages = GuestbookMessage::query()
+            ->latest()
+            ->paginate($perPage);
+
+        $presented = $messages->getCollection()->map(fn (GuestbookMessage $message) => $this->present($message));
 
         return response()->json([
             'status' => 'success',
             'counts' => $this->counts(),
-            'data' => $messages,
+            'data' => $presented->values(),
+            'meta' => [
+                'current_page' => $messages->currentPage(),
+                'last_page' => $messages->lastPage(),
+                'per_page' => $messages->perPage(),
+                'total' => $messages->total(),
+            ],
         ]);
     }
 

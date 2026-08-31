@@ -17,15 +17,15 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        // User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
 
-        // Akun admin untuk moderasi buku tamu (login: admin@example.com)
+        // Akun admin untuk moderasi buku tamu (login: admin@gmail.com)
         User::factory()->create([
             'name' => 'Admin Undangan',
-            'email' => 'admin@example.com',
+            'email' => 'admin@gmail.com',
             'is_admin' => true,
         ]);
     }
