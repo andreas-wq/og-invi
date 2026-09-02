@@ -18,7 +18,7 @@ class GuestbookController extends Controller
             ->paginate($perPage)
             ->withQueryString();
 
-        return view('undangan', [
+        return view('undangan-v2', [
             'messages' => $messages,
             'counts' => $this->counts(),
         ]);

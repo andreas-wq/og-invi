@@ -2,6 +2,8 @@
     <html lang="en-US" translate="no">
 
     <head>
+           <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+     
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
         <style type="text/css">
@@ -13,24 +15,24 @@
  <meta name="csrf-token" content="{{ csrf_token() }}">
         <!-- This site is optimized with the Yoast SEO plugin v28.3 - https://yoast.com/product/yoast-seo-wordpress/ -->
         <title>Osa & Gelar - Wedding Invitation</title>
-        <link rel="canonical" href="https://undangandigit.id/non-foto-06/" />
+        <link rel="canonical" href="https://osa-gelar.my.id" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Osa & Gelar - Wedding Invitation" />
         <meta property="og:description"
             content="Our Wedding Invitation Osa &amp; Gelar “What counts in making a happy marriage is not so much how compatible you are, but how you deal with incompatibility. A great marriage is not when the perfect couple comes together. It is when an imperfect couple learns to enjoy their differences.” Kepada Yth. Bapak / Ibu /Saudara/i […]" />
-        <meta property="og:url" content="https://undangandigit.id/non-foto-06/" />
-        <meta property="og:site_name" content="Undangan Digital" />
+        <meta property="og:url" content="https://osa-gelar.my.id" />
+        <meta property="og:site_name" content="Osa & Gelar - Invitation Wedding" />
         <meta property="article:published_time" content="2025-05-15T10:01:15+00:00" />
         <meta property="article:modified_time" content="2026-05-20T05:03:28+00:00" />
-        <meta property="og:image" content="https://undangandigit.id/wp-content/uploads/2025/05/6-kompres.webp" />
+        <meta property="og:image" content="/images/thumbnail.png" />
         <meta property="og:image:width" content="1080" />
         <meta property="og:image:height" content="1080" />
         <meta property="og:image:type" content="image/webp" />
-        <meta name="author" content="ibranaki@gmail.com" />
+        <meta name="author" content="gelariturizki@gmail.com" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:label1" content="Written by" />
-        <meta name="twitter:data1" content="ibranaki@gmail.com" />
+        <meta name="twitter:data1" content="gelariturizki@gmail.com" />
         <meta name="twitter:label2" content="Est. reading time" />
         <meta name="twitter:data2" content="1 minute" />
         <script type="application/ld+json" class="yoast-schema-graph">
@@ -826,11 +828,6 @@
             }
         }
     </style>
-    <link rel="icon" href="https://undangandigit.id/wp-content/uploads/2025/05/vavikon-150x150.webp"
-        sizes="32x32" />
-    <link rel="icon" href="https://undangandigit.id/wp-content/uploads/2025/05/vavikon-300x300.webp"
-        sizes="192x192" />
-    <link rel="apple-touch-icon" href="https://undangandigit.id/wp-content/uploads/2025/05/vavikon-300x300.webp" />
     <meta name="msapplication-TileImage"
         content="https://undangandigit.id/wp-content/uploads/2025/05/vavikon-300x300.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -1935,61 +1932,15 @@
                                                                 class="elementor-section elementor-inner-section elementor-element elementor-element-4bb08568 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                                                                 data-id="4bb08568" data-element_type="section"
                                                                 data-e-type="section">
-                                                                <div
-                                                                    class="elementor-container elementor-column-gap-default">
-                                                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-1f42e0c6"
-                                                                        data-id="1f42e0c6" data-element_type="column"
-                                                                        data-e-type="column">
-                                                                        <div
-                                                                            class="elementor-widget-wrap elementor-element-populated">
-                                                                            <div class="elementor-element elementor-element-6746e163 animated-slow elementor-widget elementor-widget-heading animated zoomIn"
-                                                                                data-id="6746e163"
-                                                                                data-element_type="widget"
-                                                                                data-e-type="widget"
-                                                                                data-settings='{"_animation":"zoomIn","_animation_mobile":"zoomIn"}'
-                                                                                data-widget_type="heading.default">
-                                                                                <h2
-                                                                                    class="elementor-heading-title elementor-size-default">
-                                                                                    Our Wedding<br />
-                                                                                    Invitation
-                                                                                </h2>
-                                                                            </div>
-                                                                            <div class="elementor-element elementor-element-5698ae09 animated-slow elementor-widget elementor-widget-heading animated fadeInDown"
-                                                                                data-id="5698ae09"
+                                                               <div class="elementor-element elementor-element-4212bab2 animated-slow elementor-widget elementor-widget-heading animated fadeInDown"
+                                                                                data-id="4212bab2"
                                                                                 data-element_type="widget"
                                                                                 data-e-type="widget"
                                                                                 data-settings='{"_animation":"fadeInDown","_animation_delay":100}'
                                                                                 data-widget_type="heading.default">
-                                                                                <h1
-                                                                                    class="elementor-heading-title elementor-size-default">
-                                                                                    O
-                                                                                </h1>
+                                                                                <img class="elementor-heading-title elementor-size-default" src="/images/header_photo.png">
                                                                             </div>
-                                                                            <div class="elementor-element elementor-element-4411e6af animated-slow elementor-widget elementor-widget-heading animated fadeInDown"
-                                                                                data-id="4411e6af"
-                                                                                data-element_type="widget"
-                                                                                data-e-type="widget"
-                                                                                data-settings='{"_animation":"fadeInDown","_animation_delay":100}'
-                                                                                data-widget_type="heading.default">
-                                                                                <h1
-                                                                                    class="elementor-heading-title elementor-size-default">
-                                                                                    G
-                                                                                </h1>
-                                                                            </div>
-                                                                            <div class="elementor-element elementor-element-5512b6b1 animated-slow elementor-widget elementor-widget-heading animated zoomIn"
-                                                                                data-id="5512b6b1"
-                                                                                data-element_type="widget"
-                                                                                data-e-type="widget"
-                                                                                data-settings='{"_animation":"zoomIn","_animation_mobile":"zoomIn"}'
-                                                                                data-widget_type="heading.default">
-                                                                                <h2
-                                                                                    class="elementor-heading-title elementor-size-default">
-                                                                                    Rabu, 16 Septermber 2026
-                                                                                </h2>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                
                                                             </section>
                                                             <div class="elementor-element elementor-element-4673218c elementor-widget elementor-widget-spacer"
                                                                 data-id="4673218c" data-element_type="widget"
@@ -2905,7 +2856,6 @@
                                             <section
                                                 class="elementor-section elementor-inner-section elementor-element elementor-element-527c54db elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                                                 data-id="527c54db" data-element_type="section" data-e-type="section">
-                                                >
                                             </section>
                                         </div>
                                     </div>
