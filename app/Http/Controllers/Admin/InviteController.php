@@ -3,17 +3,18 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Inertia\Inertia;
-use Inertia\Response;
+use Illuminate\View\View;
 
 class InviteController extends Controller
 {
-    public function index(): Response
+    public function index(): View
     {
-        return Inertia::render('admin/invite', [
-            // Ganti dengan route halaman undangan utamamu kalau bukan root '/'
-            // contoh: route('undangan.show')
+        $defaultTemplate = "Assalamu'alaikum Bapak/Ibu/Saudara/i {nama},\n\nTanpa mengurangi rasa hormat, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami.\n\nBerikut link undangan digital kami, mohon buka untuk info lengkap acara:\n{link}\n\nMerupakan suatu kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.\n\nTerima kasih banyak 🙏";
+
+        return view('admin.invite', [
+            'title' => 'Kirim Undangan',
             'invitationUrl' => url('/'),
+            'defaultTemplate' => $defaultTemplate,
         ]);
     }
 }

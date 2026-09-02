@@ -23,7 +23,18 @@ Route::middleware(['auth', 'verified'])->group(function () {
         ->middleware('throttle:6,1')
         ->name('user-password.update');
 
-    Route::inertia('settings/appearance', 'settings/appearance')->name('appearance.edit');
+    Route::get('settings/appearance', function () {
+        return view('settings.appearance', [
+            'title' => 'Appearance',
+            'appearance' => session('appearance', 'system'),
+        ]);
+    })->name('appearance.edit');
+
+    Route::post('settings/appearance', function () {
+        $appearance = request('appearance', 'system');
+        session(['appearance' => $appearance]);
+        return back();
+    })->name('appearance.update');
 });
 
 Route::get('.well-known/passkey-endpoints', function () {

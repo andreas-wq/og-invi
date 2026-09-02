@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rules\Password;
-use Inertia\Inertia;
 use Laravel\Fortify\Features;
 use Laravel\Fortify\Fortify;
 
@@ -48,32 +47,39 @@ class FortifyServiceProvider extends ServiceProvider
      */
     private function configureViews(): void
     {
-        Fortify::loginView(fn (Request $request) => Inertia::render('auth/login', [
-            'canResetPassword' => Features::enabled(Features::resetPasswords()),
-            'status' => $request->session()->get('status'),
-        ]));
+        Fortify::loginView(fn () => view('auth.login')->render());
 
-        Fortify::resetPasswordView(fn (Request $request) => Inertia::render('auth/reset-password', [
-            'email' => $request->email,
+        Fortify::resetPasswordView(fn (Request $request) => view('auth.reset-password', [
+            'title' => 'Reset password',
+            'description' => 'Please enter your new password below',
             'token' => $request->route('token'),
-            'passwordRules' => Password::defaults()->toPasswordRulesString(),
-        ]));
+            'email' => $request->email,
+        ])->render());
 
-        Fortify::requestPasswordResetLinkView(fn (Request $request) => Inertia::render('auth/forgot-password', [
-            'status' => $request->session()->get('status'),
-        ]));
+        Fortify::requestPasswordResetLinkView(fn () => view('auth.forgot-password', [
+            'title' => 'Forgot password',
+            'description' => 'Enter your email to receive a password reset link',
+        ])->render());
 
-        Fortify::verifyEmailView(fn (Request $request) => Inertia::render('auth/verify-email', [
-            'status' => $request->session()->get('status'),
-        ]));
+        Fortify::verifyEmailView(fn () => view('auth.verify-email', [
+            'title' => 'Email verification',
+            'description' => 'Please verify your email address by clicking on the link we just emailed to you.',
+        ])->render());
 
-        Fortify::registerView(fn () => Inertia::render('auth/register', [
-            'passwordRules' => Password::defaults()->toPasswordRulesString(),
-        ]));
+        Fortify::registerView(fn () => view('auth.register', [
+            'title' => 'Create an account',
+            'description' => 'Enter your details below to create your account',
+        ])->render());
 
-        Fortify::twoFactorChallengeView(fn () => Inertia::render('auth/two-factor-challenge'));
+        Fortify::twoFactorChallengeView(fn () => view('auth.two-factor-challenge', [
+            'title' => 'Two-factor authentication',
+            'description' => 'Enter the authentication code provided by your authenticator application.',
+        ])->render());
 
-        Fortify::confirmPasswordView(fn () => Inertia::render('auth/confirm-password'));
+        Fortify::confirmPasswordView(fn () => view('auth.confirm-password', [
+            'title' => 'Confirm password',
+            'description' => 'This is a secure area of the application. Please confirm your password before continuing.',
+        ])->render());
     }
 
     /**

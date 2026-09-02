@@ -6,15 +6,14 @@ use App\Http\Controllers\Controller;
 use App\Models\GuestbookMessage;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Inertia\Inertia;
-use Inertia\Response;
+use Illuminate\View\View;
 
 class GuestbookAdminController extends Controller
 {
     /**
      * Moderation dashboard for guestbook messages.
      */
-    public function index(): Response
+    public function index(): View
     {
         $messages = GuestbookMessage::query()
             ->latest()
@@ -31,7 +30,8 @@ class GuestbookAdminController extends Controller
                 'created_at' => $message->created_at?->locale('id')->isoFormat('D MMMM Y HH:mm'),
             ]);
 
-        return Inertia::render('admin/guestbook', [
+        return view('admin.guestbook', [
+            'title' => 'Moderasi Ucapan',
             'messages' => $messages,
             'stats' => [
                 'total' => GuestbookMessage::count(),
@@ -48,12 +48,10 @@ class GuestbookAdminController extends Controller
     {
         $guestbookMessage->delete();
 
-        Inertia::flash('toast', [
+        return back()->with('toast', [
             'type' => 'success',
             'message' => "Ucapan dari \"{$guestbookMessage->name}\" telah dihapus.",
         ]);
-
-        return back();
     }
 
     /**
@@ -70,11 +68,9 @@ class GuestbookAdminController extends Controller
             'replied_at' => now(),
         ]);
 
-        Inertia::flash('toast', [
+        return back()->with('toast', [
             'type' => 'success',
             'message' => "Balasan untuk \"{$guestbookMessage->name}\" telah disimpan.",
         ]);
-
-        return back();
     }
 }

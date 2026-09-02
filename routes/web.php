@@ -20,8 +20,6 @@ Route::post('/guestbook', [GuestbookController::class, 'store'])
 Route::post('/cdn-cgi/rum', fn () => response()->noContent())->name('cf.rum');
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::inertia('dashboard', 'dashboard')->name('dashboard');
-
     Route::prefix('admin')->name('admin.')->middleware('can:manage-guestbook')->group(function () {
         Route::get('guestbook', [GuestbookAdminController::class, 'index'])
             ->name('guestbook.index');
@@ -29,8 +27,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
             ->name('guestbook.reply');
         Route::delete('guestbook/{guestbook_message}', [GuestbookAdminController::class, 'destroy'])
             ->name('guestbook.destroy');
-             
-Route::get('/invite', [InviteController::class, 'index'])->name('invite');
+
+        Route::get('/invite', [InviteController::class, 'index'])->name('invite');
     });
 });
 
