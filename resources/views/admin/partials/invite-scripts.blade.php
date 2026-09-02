@@ -24,19 +24,27 @@ function escapeHtml(text) { const div = document.createElement('div'); div.textC
 function updatePreview() {
     const name = document.getElementById('guestName').value;
     const linkInput = document.getElementById('generatedLink');
-    const preview = document.getElementById('messagePreview');
+    const messagePreview = document.getElementById('messagePreview');
     const waBtn = document.getElementById('waShareBtn');
-    if (!name.trim()) { linkInput.value = ''; preview.innerHTML = '<p class="text-muted mb-0">Isi nama tamu untuk melihat preview pesan.</p>'; waBtn.href = '#'; return; }
+    if (!name.trim()) { linkInput.value = ''; messagePreview.value = ''; waBtn.href = '#'; return; }
     const link = buildLink(name); linkInput.value = link;
     const message = buildMessage(name, link);
-    preview.innerHTML = '<p class="mb-0" style="white-space: pre-wrap;">' + escapeHtml(message) + '</p>';
+    messagePreview.value = message;
     const phone = document.getElementById('guestPhone').value;
     const normalized = normalizePhone(phone);
     waBtn.href = normalized ? 'https://api.whatsapp.com/send?phone=' + normalized + '&text=' + encodeURIComponent(message) : 'https://wa.me/?text=' + encodeURIComponent(message);
 }
-function copyLink() {
-    const link = document.getElementById('generatedLink').value; if (!link) return;
-    navigator.clipboard.writeText(link).then(() => { const btn = document.querySelector('#generatedLink + .btn'); btn.innerHTML = '<i class="bi bi-check"></i> Copied!'; setTimeout(() => { btn.innerHTML = '<i class="bi bi-clipboard"></i> Copy'; }, 2000); });
+function copyAll() {
+    const link = document.getElementById('generatedLink').value;
+    const message = document.getElementById('messagePreview').value;
+    if (!link || !message) return;
+    const textToCopy = link + '\n\n' + message;
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        const btn = document.getElementById('copyAllBtn');
+        const original = btn.innerHTML;
+        btn.innerHTML = '<i class="bi bi-check"></i> Copied!';
+        setTimeout(() => { btn.innerHTML = original; }, 2000);
+    });
 }
 function saveToRecent() {
     const name = document.getElementById('guestName').value.trim(); const phone = document.getElementById('guestPhone').value.trim(); if (!name) return;

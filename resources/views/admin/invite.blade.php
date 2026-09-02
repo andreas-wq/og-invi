@@ -36,18 +36,16 @@
                         <label class="form-label fw-semibold">Link Undangan</label>
                         <div class="input-group">
                             <input type="text" class="form-control" id="generatedLink" readonly placeholder="Isi nama tamu untuk membuat link…">
-                            <button class="btn btn-outline-secondary" type="button" onclick="copyLink()">
-                                <i class="bi bi-clipboard"></i> Copy
-                            </button>
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label fw-semibold">Preview Pesan</label>
-                        <div class="border rounded p-3 bg-light" id="messagePreview">
-                            <p class="text-muted mb-0">Isi nama tamu untuk melihat preview pesan.</p>
-                        </div>
+                        <label class="form-label fw-semibold">Pesan Undangan</label>
+                        <textarea class="form-control" id="messagePreview" rows="6" readonly placeholder="Isi nama tamu untuk melihat preview pesan…"></textarea>
                     </div>
-                    <div class="d-flex gap-2">
+                    <div class="d-flex gap-2 flex-wrap">
+                        <button class="btn btn-primary" type="button" onclick="copyAll()" id="copyAllBtn">
+                            <i class="bi bi-clipboard-check"></i> Copy Link & Pesan
+                        </button>
                         <a href="#" class="btn btn-success" id="waShareBtn" target="_blank" rel="noopener">
                             <i class="bi bi-whatsapp"></i> Bagikan via WA
                         </a>
