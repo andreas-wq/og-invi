@@ -248,7 +248,7 @@
         margin-bottom: 6px;
         font-weight: 600;
     }
-    .gb-input, .gb-textarea {
+    input.gb-input, .gb-textarea {
         width: 100%;
         box-sizing: border-box;
         border: 1px solid #e5e0d5;
